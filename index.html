@@ -1,16 +1,50 @@
 <style media="screen">
-  <!-- body{
-    background-image:url("image/fullimage");
-    background-repeat: no-repeat;
-  } -->
-  img{
-    top: 0;
-    left: 0;
-    min-width:100%;
-    min-height:100%;
+  @font-face {
+    font-family: "custom";
+    src: url("css/KismetNF.otf");
+}
+@font-face {
+  font-family: "lobster";
+  src: url("css/Lobster-Regular.ttf");
+}
+@font-face {
+  font-family: "ptscan";
+  src: url("css/PTSans-Italic.ttf");
+}
+@font-face {
+  font-family: "ptsan";
+  src: url("css/PTSans-Bold.ttf");
+}
+#head { font-family: lobster ; font-size:100px;margin:0px;}
+  body{
+    background-image:url("image/written.jpg");
   }
+  #body{
+    font-family: ptscan ; font-size:50px;
+  }
+  #footer{
+    font-family: ptsan ; font-size:50px;
+  }
+  .foot{
+    position:relative;
+    bottom:-220px;
+  }
+.title{
+
+}
 </style>
 <body >
-<img src="image/fullimage" alt="">
+<div class="title">
+  <p id="head" style="left-margin:5px;">Ram Weds Padmini</p>
+</div>
+<div class="body">
+<p id="body" style="margin-left:10%">Hearty welcome to our New Journy of Life
+</p>
+
+</div>
+<div class="foot">
+  <p id="footer">Venue: REC(Rajalakshmi Engineering College)<br>Date: 31-02-2022</p>
+
+</div>
 
 </body>
