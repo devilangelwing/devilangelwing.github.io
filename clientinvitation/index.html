@@ -24,7 +24,7 @@ html {
   bottom: 0;
   right: 0;
   width: 100%;
-  font-size: 100px;
+  font-size: 50px;
   height: 60px;
   color: #ffffff;
   border-radius: 4px;
@@ -66,17 +66,17 @@ li {
     <li class="w3-padding-32 w3-red w3-circle w3-center  col-xs-2 col-sm-2 col-md-2 col-lg-2 min" style="background-color:green; "></li>
   </ul> -->
   <div class="row digital-clock" >
-    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 circle row" style="margin-left:125px">
-      <p class="row" style="height:5px;padding-bottom:10px;padding-left:33%" >Days</p>
-      <p class="row days" style="padding-left:42%"></p>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4  row" style="margin-left:25px;padding-top:5px;">
+      <!-- <p class="row" style="height:5px;padding-bottom:10px; ">Days: </p> -->
+      <p class="row days" style="padding-left:10px;"></p>
     </div>
-    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 circle row" style="margin-left:125px">
-      <p class="row" style="height:5px;padding-bottom:10px;padding-left:27%">Hours</p>
-      <p class="row hrs" style="padding-left:60%"></p>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3  row" style="margin-left:25px;padding-top:5px;">
+      <!-- <p class="row" style="height:5px;padding-bottom:10px">Hours:</p> -->
+      <p class="row hrs" style="padding-left:10px;"></p>
     </div>
-    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 circle row" style="margin-left:125px">
-      <p class="row"style="height:5px;padding-bottom:10px;padding-left:40%">Min</p>
-      <p class="row min" style="padding-left:50%"></p>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3  row" style="margin-left:25px;padding-top:5px;">
+      <!-- <p class="row"style="height:5px;padding-bottom:10px">Min:</p> -->
+      <p class="row min" style="padding-left:10px;"></p>
     </div>
   </div>
 
@@ -126,9 +126,9 @@ var diffMs = (Christmas - today); // milliseconds between now & Christmas
 var diffDays = Math.floor(diffMs / 86400000); // days
 var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
 var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
-  $('.days').html(diffDays)
-  $('.hrs').html(diffHrs)
-  $('.min').html(diffMins)
+  $('.days').html("Days : "+diffDays)
+  $('.hrs').html("Hrs : "+diffHrs)
+  $('.min').html("Mins : "+diffMins)
  }
 // $(document).ready(function(){
 //   var date = new Date();
