@@ -1,55 +1,182 @@
-<style media="screen">
-  @font-face {
-    font-family: "custom";
-    src: url("css/KismetNF.otf");
-}
+<!DOCTYPE html>
+<html>
+<title>Digital Invitation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+.mySlides {display:none;}
 @font-face {
-  font-family: "lobster";
-  src: url("css/Lobster-Regular.ttf");
+  font-family: 'DIGITAL';
+  src: url('https://cssdeck.com/uploads/resources/fonts/digii/DS-DIGII.TTF');
 }
-@font-face {
-  font-family: "ptscan";
-  src: url("css/PTSans-Italic.ttf");
-}
-@font-face {
-  font-family: "ptsan";
-  src: url("css/PTSans-Bold.ttf");
-}
-#head { font-family: lobster ; font-size:760%;margin:0px;}
-  body{
-    background-image:url("image/hearthand.jpg");
-  }
-  #body{
-    font-family: ptscan ; font-size:270%;
-  }
-  #footer{
-    font-family: ptsan ; font-size:270%;
-    position: relative;
-  bottom: -200px;
-  width: 100%;
-  height: 2.5rem;
-  }
-  .foot{
-  }
-.title{
 
+html {
+  height: 100%;
+  background: radial-gradient(#000, #555);
+}
+
+.digital-clock {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  font-size: 100px;
+  height: 60px;
+  color: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  /* font: 50px/60px 'DIGITAL', Helvetica; */
+  /*background: linear-gradient(90deg, #000, #555);*/
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 25%;
+  color: #fff;
+  line-height: 100px;
+  text-align: center;
+  background: #000;
+  opacity: 0.5;
+  display:inline;
+}
+ul li{
+  display: inline;
+}
+li {
+  margin-left:10%;
+  opacity:0.5;
+  background-color:green !important;
+  display:inline;
 }
 </style>
-<body >
-<div class="title">
-  <p id="head" style="left-margin:5px;text-align:center;color:darkslategray">Ram Weds Padmini</p>
-</div>
-<div class="body">
-  <!-- <img src="image/couple.jpg" alt=""> -->
-<p id="body" style="color:white;text-align:center;">Hearty welcome to our New Journy of Life
-</p>
-<p style="color:white;text-align:center;font-size:215%;">Join us at our reception on a breeze evening (7:00 PM) at Rocky Mahal in redhills</p>
-<p style="color:white;text-align:center;font-size:215%;">Will be expecting your Presence.</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<body>
+
+<div class="w3-content w3-display-container" style="position:relative">
+<div class="mySlides" style="width:100%">
+  <!-- <ul class="row" style="list-style-type:none;position:absolute;margin-top:50%;width:100%">
+    <li class="w3-padding-32 w3-red w3-circle w3-center days col-xs-2 col-sm-2 col-md-2 col-lg-2" style="background-color:green; "></li>
+    <li class="w3-padding-32 w3-red w3-circle w3-center col-xs-2 col-sm-2 col-md-2 col-lg-2 hrs" style="background-color:green; "></li>
+    <li class="w3-padding-32 w3-red w3-circle w3-center  col-xs-2 col-sm-2 col-md-2 col-lg-2 min" style="background-color:green; "></li>
+  </ul> -->
+  <div class="row digital-clock" style="background-color: bisque;height:25%;">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 circle row" style="margin-left:110px">
+      <p class="row" style="height:5px;padding-bottom:10px;padding-left:40%" >Days</p>
+      <p class="row days" style="padding-left:50%"></p>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 circle row" style="margin-left:110px">
+      <p class="row" style="height:5px;padding-bottom:10px;padding-left:40%">Hours</p>
+      <p class="row hrs" style="padding-left:50%"></p>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 circle row" style="margin-left:110px">
+      <p class="row"style="height:5px;padding-bottom:10px;padding-left:40%">Minutes</p>
+      <p class="row min" style="padding-left:50%"></p>
+    </div>
+  </div>
+
+    <img class="" src="image/firstpage.png" style="width:100%">
 
 </div>
 
-  <p id="footer" style="text-align:center;color:darkslategray">Venue: Rocky Mahal, Avadi Main Road, Redhills<br>Date: 31-02-2022</p>
+  <img class="mySlides" src="image/secondpage.jpeg" style="width:100%">
 
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
 
+<script>
+  $(document).ready(function() {
+  clockUpdate();
+  setInterval(clockUpdate, 1000);
+})
+
+function clockUpdate() {
+  var date = new Date();
+  $('.digital-clock').css({'color': '#fff', 'text-shadow': '0 0 6px #ff0'});
+  function addZero(x) {
+    if (x < 10) {
+      return x = '0' + x;
+    } else {
+      return x;
+    }
+  }
+
+  function twelveHour(x) {
+    if (x > 12) {
+      return x = x - 12;
+    } else if (x == 0) {
+      return x = 12;
+    } else {
+      return x;
+    }
+  }
+
+  var h = addZero(twelveHour(date.getHours()));
+  var m = addZero(date.getMinutes());
+  var s = addZero(date.getSeconds());
+  var today = new Date();
+var Christmas = new Date("04-14-2021");
+var diffMs = (Christmas - today); // milliseconds between now & Christmas
+var diffDays = Math.floor(diffMs / 86400000); // days
+var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
+var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
+  $('.days').html(diffDays)
+  $('.hrs').html(diffHrs)
+  $('.min').html(diffMins)
+ }
+// $(document).ready(function(){
+//   var date = new Date();
+//   var dates = date.getDate();
+//   alert(dates);
+//   $("#date").val(dates);
+//
+// });
+  document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        // up arrow
+    }
+    else if (e.keyCode == '40') {
+        // down arrow
+    }
+    else if (e.keyCode == '37') {
+       // left arrow
+       plusDivs(-1)
+    }
+    else if (e.keyCode == '39') {
+       // right arrow
+       plusDivs(1)
+    }
+
+}
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
 
 </body>
+</html>
