@@ -10,6 +10,10 @@
   font-family: 'DIGITAL';
   src: url('https://cssdeck.com/uploads/resources/fonts/digii/DS-DIGII.TTF');
 }
+@font-face {
+  font-family: 'pacifico';
+  src: url('css/Pacifico.ttf');
+}
 
 html {
   height: 100%;
@@ -26,7 +30,7 @@ html {
   width: 100%;
   font-size: 50px;
   height: 60px;
-  color: #ffffff;
+  color: #f2f6f7;
   border-radius: 4px;
   text-align: center;
   /* font: 50px/60px 'DIGITAL', Helvetica; */
@@ -68,15 +72,15 @@ li {
   <div class="row digital-clock" >
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4  row" style="margin-left:25px;padding-top:5px;">
       <!-- <p class="row" style="height:5px;padding-bottom:10px; ">Days: </p> -->
-      <p class="row days" style="padding-left:10px;"></p>
+      <p class="row days" style="padding-left:10px;font-family:pacifico;"></p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3  row" style="margin-left:25px;padding-top:5px;">
       <!-- <p class="row" style="height:5px;padding-bottom:10px">Hours:</p> -->
-      <p class="row hrs" style="padding-left:10px;"></p>
+      <p class="row hrs" style="padding-left:10px;font-family:pacifico;"></p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3  row" style="margin-left:25px;padding-top:5px;">
       <!-- <p class="row"style="height:5px;padding-bottom:10px">Min:</p> -->
-      <p class="row min" style="padding-left:10px;"></p>
+      <p class="row min" style="padding-left:10px;font-family:pacifico;"></p>
     </div>
   </div>
 
@@ -98,7 +102,7 @@ li {
 
 function clockUpdate() {
   var date = new Date();
-  $('.digital-clock').css({'color': '#fff', 'text-shadow': '0 0 6px #ff0'});
+  //$('.digital-clock').css({'text-shadow': '0 0 6px #ff0'});
   function addZero(x) {
     if (x < 10) {
       return x = '0' + x;
