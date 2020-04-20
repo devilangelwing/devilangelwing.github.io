@@ -30,7 +30,7 @@ html {
   width: 100%;
   font-size: 50px;
   height: 60px;
-  color: #f2f6f7;
+  color: #f2f6f7s;
   border-radius: 4px;
   text-align: center;
   /* font: 50px/60px 'DIGITAL', Helvetica; */
@@ -62,8 +62,7 @@ li {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <body>
 
-<div class="w3-content w3-display-container" style="position:relative">
-<div class="mySlides" style="width:100%">
+<div class="first" style="width:100%">
   <!-- <ul class="row" style="list-style-type:none;position:absolute;margin-top:50%;width:100%">
     <li class="w3-padding-32 w3-red w3-circle w3-center days col-xs-2 col-sm-2 col-md-2 col-lg-2" style="background-color:green; "></li>
     <li class="w3-padding-32 w3-red w3-circle w3-center col-xs-2 col-sm-2 col-md-2 col-lg-2 hrs" style="background-color:green; "></li>
@@ -87,12 +86,15 @@ li {
     <img class="" src="image/firstpage.png" style="width:100%;height:100%">
 
 </div>
-
-  <img class="mySlides" src="image/secondpage.jpeg" style="width:100%">
-
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+<div class="second">
+  <img class="" src="image/secondpage.jpeg" style="width:100%">
 </div>
+<div class="third">
+  <img src="image/thirpage.jpeg" alt="" style="width:100%">
+
+</div>
+
+
 
 <script>
   $(document).ready(function() {
@@ -164,22 +166,22 @@ function checkKey(e) {
 
 }
 var slideIndex = 1;
-showDivs(slideIndex);
+//showDivs(slideIndex);
 
 function plusDivs(n) {
-  showDivs(slideIndex += n);
+  //showDivs(slideIndex += n);
 }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
+// function showDivs(n) {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   if (n > x.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = x.length}
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";
+//   }
+//   x[slideIndex-1].style.display = "block";
+// }
 </script>
 
 </body>
