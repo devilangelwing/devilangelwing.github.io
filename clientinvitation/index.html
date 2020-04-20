@@ -147,10 +147,19 @@ var lastScrollTop = 0;
         st = $(this).scrollTop();
         if(st < lastScrollTop) {
             console.log('up 1');
+            $("html, body").animate({ scrollTop: 0 });
         }
         else {
             console.log('down 1');
+
+
+            if (window.ht != 3 && window.ht < 3){
+              window.ht =  window.ht + 1
               $("html, body").animate({ scrollTop: $(".firstimg").height() });
+            }
+
+
+
         }
         lastScrollTop = st;
     });
@@ -162,6 +171,7 @@ var lastScrollTop = 0;
   // $(".second").height(winhei);
   // $(".third").height(winhei);
   setInterval(clockUpdate, 1000);
+   window.ht = 0;
 })
 
 function clockUpdate() {
