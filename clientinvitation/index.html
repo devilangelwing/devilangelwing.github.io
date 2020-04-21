@@ -78,28 +78,33 @@ li {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <body>
   <div class="">
-    <div class="first" style="">
-      <div class="row clock" style="position:absolute;">
+    <div class="first" style="background-image:url('image/darkblue.jpg');height:600px;">
+      <p style="padding-left:10px;font-family:pacifico;font-size:25px;color:white;text-align:center;">
+        Dr. A. Abarajitha, M.B.B.S.,<br> with <br> Dr. K.S. Vignesh, M.Tech., Ph.D.,</p>
+      <!-- <div class="row clock" style="position:absolute;"> -->
         <!-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4  row time" style=""> -->
 
-          <p class="row days time" style="padding-left:10px;font-family:pacifico;"></p>
+          <p class="row circle days time" style="padding-left:10px;font-family:pacifico;"></p>
         <!-- </div> -->
         <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3  row time" style=""> -->
 
-          <p class="row hrs time" style="padding-left:10px;font-family:pacifico;"></p>
+          <p class="row  circle hrs time" style="padding-left:10px;font-family:pacifico;"></p>
         <!-- </div> -->
         <!-- <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3  row time" style=""> -->
 
-          <p class="row min time" style="padding-left:10px;font-family:pacifico;"></p>
+          <p class="row circle min time" style="padding-left:10px;font-family:pacifico;"></p>
         <!-- </div> -->
-      </div>
-      <img class="firstimg" src="image/firstpage.png" style="width:100%" >
+      <!-- </div> -->
+      <!-- <img class="firstimg" src="image/firstpage.png" style="width:100%" > -->
     </div>
     <div class="second" style="height:100%">
       <img class="secondimg" src="image/secondpage.jpeg" style="width:100%">
     </div>
-    <div class="third" >
-      <img class="thirdimg" src="image/darkblue.jpg" alt="" style="width:100%">s
+    <div class="third" style="background-image:url('image/darkblue.jpg');height:300px;">
+    <!-- <img class="thirdimg" src="image/darkblue.jpg" alt="" style="width:100%"> -->
+    <p style="padding-left:10px;font-family:pacifico;font-size:15px;color:white;text-align:center;">
+      On wednesday,<br> 10th June 2020, <br> Between 9.00 a.m and 10.25 a.m
+    </p>
     </div>
 
   </div>
@@ -137,26 +142,26 @@ li {
 <!-- </div> -->
 
 <script>
-$("document").bind("keypress",function(e){
-  alert(e.code);
-
-
-})
+// $("document").bind("keypress",function(e){
+//   alert(e.code);
+//
+//
+// })
 var lastScrollTop = 0;
     $(window).on('scroll', function() {
         st = $(this).scrollTop();
         if(st < lastScrollTop) {
-            console.log('up 1');
-            $("html, body").animate({ scrollTop: 0 });
+            //console.log('up 1');
+          //  $("html, body").animate({ scrollTop: 0 });
         }
         else {
             console.log('down 1');
 
 
-            if (window.ht != 3 && window.ht < 3){
-              window.ht =  window.ht + 1
+            //if (window.ht != 3 && window.ht < 3){
+            //  window.ht =  window.ht + 1
               $("html, body").animate({ scrollTop: $(".firstimg").height() });
-            }
+            //}
 
 
 
